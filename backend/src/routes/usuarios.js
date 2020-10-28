@@ -8,15 +8,23 @@ router.get('/', (req, res, next) => {
 });
 
 router.post('/', (req, res, next) => {
+
+    const usuario = {
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password
+    };
+
     res.status(201).send({
-        mensagem: 'Usando o Post dentro da rota de usuarios'
+        mensagem: 'Usando o Post dentro da rota de usuarios',
+        usuarioCriado: usuario
     });
 });
 
-router.get('/:id_user', (req, res, next) => {
+router.delete('/:id_user', (req, res, next) => {
     const id = req.params.id_user
     res.status(200).send({
-        mensagem: 'Usando o Get com um usuário exclusivo',
+        mensagem: 'Usando o DELETE com um usuário exclusivo',
         id: id
     });
 });
@@ -24,16 +32,9 @@ router.get('/:id_user', (req, res, next) => {
 router.put('/:id_user', (req, res, next) => {
     const id = req.params.id_user
     res.status(200).send({
-        mensagem: 'Usando o Get com um usuário exclusivo',
+        mensagem: 'Usando o PUT com um usuário exclusivo',
         id: id
     });
 });
 
-router.put('/:id_user', (req, res, next) => {
-    const id = req.params.id_user
-    res.status(200).send({
-        mensagem: 'Usando o Get com um usuário exclusivo',
-        id: id
-    });
-});
 module.exports = router;
