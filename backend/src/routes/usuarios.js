@@ -15,9 +15,6 @@ router.get('/', (req, res, next) => {
     })
 });
 
-// res.status(200).send({
-    //     mensagem: 'Usando o GET dentro da rota de usuarios'
-    // });
 
 router.post('/create', (req, res, next) => {
 
@@ -46,19 +43,62 @@ router.post('/create', (req, res, next) => {
 });
 
 
-router.put('/:id_user', (req, res, next) => {
-    const id = req.params.id_user
-    res.status(200).send({
-        mensagem: 'Usando o PUT com um usuário exclusivo',
-        id: id
+router.get('/:id_user', (req, res, next) => {
+    mysql.getConnection((error, conn) => {
+        if (error) { return res.status(500).send({ error: error })}
+        conn.query(
+            'SELECT * FROM usuarios WHERE id = ?',
+            [req.params.id_user],
+            (error, resultado, field) => {
+                if (error) { return res.status(500).send({ error: error })}
+                return res.status(200).send({response: resultado})
+            }
+        )
+    })
+});
+
+router.put('/', (req, res, next) => {
+    mysql.getConnection((error, conn) => {
+        if (error) { return res.status(500).send({ error: error })}
+        conn.query(
+            `UPDATE usuarios SET nome = ?, email = ?, senha = ?
+                WHERE id = ?`,
+
+            [
+                req.body.name, 
+                req.body.email, 
+                req.body.password, 
+                req.body.id
+            ],
+            (error, resultado, field) => {
+                conn.release();
+                if (error) { return res.status(500).send({ error: error })}
+
+                res.status(202).send({
+                    mensagem: 'Usuário alterado com sucesso!',
+                });
+            }
+        )
     });
 });
 
-router.delete('/:id_user', (req, res, next) => {
-    const id = req.params.id_user
-    res.status(200).send({
-        mensagem: 'Usando o DELETE com um usuário exclusivo',
-        id: id
+router.delete('/', (req, res, next) => {
+    mysql.getConnection((error, conn) => {
+        if (error) { return res.status(500).send({ error: error })}
+        conn.query(
+            `DELETE FROM usuarios WHERE id = ?`, 
+            
+            [req.body.id],
+
+            (error, resultado, field) => {
+                conn.release();
+                if (error) { return res.status(500).send({ error: error })}
+
+                res.status(202).send({
+                    mensagem: 'Usuário removido com sucesso!',
+                });
+            }
+        )
     });
 });
 
