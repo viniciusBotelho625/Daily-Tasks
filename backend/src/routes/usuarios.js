@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const mysql = require('../mysql').pool;
 
 router.get('/', (req, res, next) => {
     res.status(200).send({
@@ -15,9 +16,25 @@ router.post('/', (req, res, next) => {
         password: req.body.password
     };
 
-    res.status(201).send({
-        mensagem: 'Usando o Post dentro da rota de usuarios',
-        usuarioCriado: usuario
+    mysql.getConnection((error, conn) => {
+        conn.query(
+            'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)',
+            [req.body.name, req.body.email, req.body.password],
+            (error, resultado, field) => {
+                conn.release();
+                if (error) {
+                    return res.status(500).send({
+                        error: error,
+                        response: null
+                    });
+                }
+
+                res.status(201).send({
+                    mensagem: 'Usuário criado com sucesso!',
+                    id_usuario: resultado.insertId
+                });
+            }
+        )
     });
 });
 
