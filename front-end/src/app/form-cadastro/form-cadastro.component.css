@@ -1,0 +1,12 @@
+.form-group{
+    align-items: center !important;
+}
+.porta{
+    size: 10px ;
+}
+::placeholder{
+    color: black;
+}
+#nome, #email, #senha, #btnSalvar{
+    border-radius: 7px !important;
+}

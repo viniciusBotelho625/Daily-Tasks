@@ -1,0 +1,10 @@
+
+.logoUsuario{
+    display: flex;
+    align-items: center;
+ }
+ h1{
+     font-family: 'Century Gothic', sans-serif;
+     text-align: center;
+     font-size: 20px;
+ }
