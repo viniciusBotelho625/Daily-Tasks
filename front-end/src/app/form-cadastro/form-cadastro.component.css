@@ -10,3 +10,16 @@
 #nome, #email, #senha, #btnSalvar{
     border-radius: 7px !important;
 }
+
+
+/*Transição de botão*/
+#btnSalvar{
+  background: #d1d1d1;
+  text-align: center !important;
+
+  transition: background-color 500ms;
+}
+
+#btnSalvar:hover{
+  background: #92929241;
+}
