@@ -104,12 +104,24 @@ router.put('/', (req, res, next) => {
 
                 res.status(202).send({
                     mensagem: 'Lembrete alterado com sucesso!',
-                });
+                })
             }
         )
     })
 });
 
+// Contador de lembretes
+router.get('/', (rq, res, next) =>{
+    mysql.getConnection((error, conn) => {
+        if (error) { return res.status(500).send({ error: error })}
+        conn.query(
+            `SELECT count(*)
+            FROM lembretes AS L
+            JOIN usuarios AS U ON u.id = L.usuario_id
+            WHERE L.concluido = FALSE AND U.id = 1`
+        )
+    })
+});
 
 
 module.exports = router;

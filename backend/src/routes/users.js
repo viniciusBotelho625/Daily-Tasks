@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const mysql = require('../mysql').pool;
+const bcrypt = require('bcrypt');
+
 
 router.get('/', (req, res, next) => {
     mysql.getConnection((error, conn) => {
@@ -17,30 +19,38 @@ router.get('/', (req, res, next) => {
 
 
 router.post('/create', (req, res, next) => {
-
-    const usuario = {
-        name: req.body.name,
-        email: req.body.email,
-        password: req.body.password
-    };
-
-    mysql.getConnection((error, conn) => {
-        if (error) { return res.status(500).send({ error: error })}
-        conn.query(
-            'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)',
-            [req.body.name, req.body.email, req.body.password],
-            (error, resultado, field) => {
-                conn.release();
-                if (error) { return res.status(500).send({ error: error })}
-
-                res.status(201).send({
-                    mensagem: 'Usuário criado com sucesso!',
-                    id_usuario: resultado.insertId
+    mysql.getConnection((err, conn) => {
+        if (err) { return res.status(500).send({ error: error }) }
+        conn.query('SELECT * FROM usuarios WHERE email = ?', [req.body.email], (error, results) =>{
+            if (error) { return res.status(500).send({ error: error })}
+            if (results.length > 0) {
+                res.status(409).send({mensagem: 'Usuário já cadastrado' })
+            } else {
+                bcrypt.hash(req.body.password, 10, (errBcript, hash) => {
+                    if (errBcript) {return res.status(500).send({ error: errBcript}) }
+                    conn.query(
+                        'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)',
+                        [req.body.name, req.body.email, hash],
+                        (error, resultado) => {
+                            conn.release();
+                            if (error) { return res.status(500).send({ error: error })}
+                            response = {
+                                mensagem: 'Usuário criado com sucesso!',
+                                usuarioCriado: {
+                                    id_usuario: resultado.insertId,
+                                    nome: req.body.name,
+                                    email: req.body.email
+                                }
+                            }
+                            return res.status(201).send(response);
+                            
+                        })
                 });
             }
-        )
+        })
+          
     });
-});
+})
 
 
 router.get('/:id_user', (req, res, next) => {
