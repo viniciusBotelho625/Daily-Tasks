@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const mysql = require('../mysql').pool;
-
+const login = require('../middleware/login');
 
 //Listar todos lembretes não concluidos
-router.get('/:id_user', (req, res, next) => {
+router.get('/', login.mandatory, (req, res, next) => {
     mysql.getConnection((error, conn) =>{
         if (error) { return res.status(500).send({ error: error })}
         conn.query(
@@ -12,7 +12,7 @@ router.get('/:id_user', (req, res, next) => {
             FROM lembretes AS L
             JOIN usuarios AS U ON U.id = L.usuario_id
             WHERE L.concluido = false AND U.id = ?`,
-            [req.params.id_user],
+            [req.usuario.id],
             (error, resultado, field) => {
                 if (error) { return res.status(500).send({ error: error })}
                 return res.status(200).send({response: resultado})
@@ -22,7 +22,8 @@ router.get('/:id_user', (req, res, next) => {
 });
 
 //Listar todos lembretes concluidos
-router.get('/concluidos/:id_user', (req, res, next) => {
+router.get('/concluidos/', login.mandatory, (req, res, next) => {
+    
     mysql.getConnection((error, conn) =>{
         if (error) { return res.status(500).send({ error: error })}
         conn.query(
@@ -30,7 +31,7 @@ router.get('/concluidos/:id_user', (req, res, next) => {
             FROM lembretes AS L
             JOIN usuarios AS U ON U.id = L.usuario_id
             WHERE L.concluido = true AND U.id = ?`,
-            [req.params.id_user],
+            [req.usuario.id],
             (error, resultado, field) => {
                 if (error) { return res.status(500).send({ error: error })}
                 return res.status(200).send({response: resultado})
@@ -39,17 +40,7 @@ router.get('/concluidos/:id_user', (req, res, next) => {
     })
 });
 
-router.post('/create', (req, res, next) => {
-
-    const tasks = {
-        date_start: req.body.date_start,
-        date_end: req.body.date_end,
-        titlle: req.body.title,
-        description: req.body.description,
-        concluded: false,
-        user_id: req.body.user_id
-    };
-
+router.post('/', login.optional, (req, res, next) => {
     mysql.getConnection((error, conn) => {
         if (error) { return res.status(500).send({ error: error })}
         conn.query(
@@ -60,7 +51,7 @@ router.post('/create', (req, res, next) => {
                 req.body.date_end,
                 req.body.title,
                 req.body.description,
-                req.body.user_id
+                req.usuario.id
             ],
             (error, resultado, field) => {
                 conn.release();
@@ -75,7 +66,7 @@ router.post('/create', (req, res, next) => {
     })
 });
 
-router.delete('/', (req, res, next) => {
+router.delete('/', login.mandatory, (req, res, next) => {
     mysql.getConnection((error, conn) => {
         if (error) { return res.status(500).send({ error: error })}
         conn.query(
@@ -85,7 +76,7 @@ router.delete('/', (req, res, next) => {
                 if (error) { return res.status(202).send({ error: error })}
 
                 res.status(202).send({
-                    mensagem: 'Usuário removido com sucesso!',
+                    mensagem: 'Lembrete removido com sucesso!',
                 });
             }
         )
@@ -93,7 +84,7 @@ router.delete('/', (req, res, next) => {
 });
 
 //Alterar status do projeto => (Fazer ainda o jeito de descobrir qual ID ta sendo passado)
-router.put('/', (req, res, next) => {
+router.put('/', login.mandatory, (req, res, next) => {
     mysql.getConnection((error, conn) =>{
         if (error) { return res.status(500).send({ error: error })}
         conn.query(
@@ -103,7 +94,7 @@ router.put('/', (req, res, next) => {
                 if (error) { return res.status(202).send({ error: error })}
 
                 res.status(202).send({
-                    mensagem: 'Lembrete alterado com sucesso!',
+                    mensagem: 'Lembrete concluido com sucesso!',
                 })
             }
         )
