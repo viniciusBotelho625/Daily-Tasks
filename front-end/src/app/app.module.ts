@@ -5,12 +5,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DescricaoCadastroComponent } from './descricao-cadastro/descricao-cadastro.component';
 import { FormCadastroComponent } from './form-cadastro/form-cadastro.component';
+import { TopoHomeComponent } from './topo-home/topo-home.component';
+import { CorpoHomeComponent } from './corpo-home/corpo-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DescricaoCadastroComponent,
-    FormCadastroComponent
+    FormCadastroComponent,
+    TopoHomeComponent,
+    CorpoHomeComponent
   ],
   imports: [
     BrowserModule,
