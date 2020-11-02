@@ -7,6 +7,7 @@ import { DescricaoCadastroComponent } from './components/descricao-cadastro/desc
 import { FormCadastroComponent } from './components/form-cadastro/form-cadastro.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { LoginComponent } from './views/login/login.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,12 @@ import { LoginComponent } from './views/login/login.component';
     DescricaoCadastroComponent,
     FormCadastroComponent,
     CadastroComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
