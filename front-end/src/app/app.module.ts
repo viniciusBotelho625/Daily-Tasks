@@ -3,18 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DescricaoCadastroComponent } from './descricao-cadastro/descricao-cadastro.component';
-import { FormCadastroComponent } from './form-cadastro/form-cadastro.component';
-import { TopoHomeComponent } from './topo-home/topo-home.component';
-import { CorpoHomeComponent } from './corpo-home/corpo-home.component';
+import { DescricaoCadastroComponent } from './components/descricao-cadastro/descricao-cadastro.component';
+import { FormCadastroComponent } from './components/form-cadastro/form-cadastro.component';
+import { CadastroComponent } from './views/cadastro/cadastro.component';
+import { LoginComponent } from './views/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DescricaoCadastroComponent,
     FormCadastroComponent,
-    TopoHomeComponent,
-    CorpoHomeComponent
+    CadastroComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
