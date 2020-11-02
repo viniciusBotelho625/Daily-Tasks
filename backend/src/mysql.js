@@ -1,3 +1,4 @@
+const { query } = require('express');
 const mysql = require('mysql2');
 
 var db = mysql.createPool({
@@ -7,6 +8,5 @@ var db = mysql.createPool({
     "host": "localhost",
     "port": 3306
 });
-
 
 exports.pool = db;

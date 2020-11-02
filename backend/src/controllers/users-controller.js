@@ -9,6 +9,7 @@ exports.getUser = (req, res, next) => {
         conn.query(
             'SELECT * FROM usuarios',
             (error, resultado, field) => {
+                conn.release();
                 if (error) { return res.status(500).send({ error: error })}
                 return res.status(200).send({response: resultado})
             }
