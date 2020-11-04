@@ -1,15 +1,15 @@
-// import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-// @Component({
-//   selector: 'app-corpo-home',
-//   templateUrl: './corpo-home.component.html',
-//   styleUrls: ['./corpo-home.component.css']
-// })
-// export class CorpoHomeComponent implements OnInit {
+@Component({
+  selector: 'app-corpo-home',
+  templateUrl: './corpo-home.component.html',
+  styleUrls: ['./corpo-home.component.css']
+})
+export class CorpoHomeComponent implements OnInit {
 
-//   constructor() { }
+  constructor() { }
 
-//   ngOnInit(): void {
-//   }
+  ngOnInit(): void {
+  }
 
-// }
+}
