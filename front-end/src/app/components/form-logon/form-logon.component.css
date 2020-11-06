@@ -1,0 +1,25 @@
+.btn-logon {
+  width: 174px;
+  height: 40px;
+  background-color: #A59C9C;
+  border-radius: 8px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.btn-logon:hover {
+  border: none;
+}
+
+.form-logon {
+  text-align: center;
+}
+
+
+::-moz-placeholder {
+  font-size: 12px;
+}
+
+::-webkit-input-placeholder {
+  font-size: 12px;
+}

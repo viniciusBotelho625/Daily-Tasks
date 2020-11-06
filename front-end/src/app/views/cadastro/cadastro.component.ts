@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroComponent implements OnInit {
 
-  constructor() { }
+  users: any
+
+  constructor(
+    private usersService: UsersService
+  ) { }
 
   ngOnInit(): void {
+    document.body.classList.add('bg-register');
   }
-
 }
