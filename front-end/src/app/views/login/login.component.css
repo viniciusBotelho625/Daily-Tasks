@@ -26,18 +26,16 @@
   text-align: justify;
 }
 
-.btn-register {
-  border: none;
-  background: none;
-  color: white;
+.link-register {
   cursor: pointer;
   display: block;
-  margin-left: 24%;
+  margin-left: 25%;
   margin-right: auto;
   text-align: justify;
+  text-decoration: none;
 }
 
-.btn-register:hover {
+.link-register:hover {
   transition: 0.3s;
   opacity: 0.4;
 }

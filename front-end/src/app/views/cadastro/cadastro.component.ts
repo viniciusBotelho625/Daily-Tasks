@@ -15,13 +15,6 @@ export class CadastroComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.usersService.getUsers().subscribe(
-      (data) => {
-        this.users = data['users'];
-      },
-      (error) => {
-        console.log(error)
-      }
-    )
+    document.body.classList.add('bg-register');
   }
 }
