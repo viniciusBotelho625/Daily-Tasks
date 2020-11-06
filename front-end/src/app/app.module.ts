@@ -12,6 +12,7 @@ import { HomeComponent } from './views/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './views/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FormLogonComponent } from './components/form-logon/form-logon.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     CadastroComponent,
     HomeComponent,
     LoginComponent,
-    CardsHomeComponent
+    CardsHomeComponent,
+    FormLogonComponent
   ],
   imports: [
     BrowserModule,
