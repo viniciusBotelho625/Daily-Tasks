@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
 
-
 .app {
   font-family: 'Roboto', sans-serif;
   width: 100%;
@@ -9,7 +8,7 @@
   overflow-y: hidden;
   margin: 0;
   padding: 0;
-  background-image: url(./assets/img/Fundo-login.png);
+  /* background-image: url(./assets/img/Fundo-login.png); */
 }
 
 input,

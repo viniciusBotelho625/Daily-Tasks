@@ -1,0 +1,45 @@
+
+<div class="header col-12 text-center">
+  <img id="logo" src="../../../assets/img/logo-white.png" alt="logo">
+</div>
+
+<p class="title">Faça seu login</p>
+
+<form class="form-logon">
+  <div class="input-group mb-3 col-md-3 col-12 mx-auto">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">
+        <i class="fas fa-envelope"></i>
+      </span>
+    </div>
+    <input type="text" class="form-control" placeholder="email@exemplo.com.br" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3 col-md-3 col-12 mx-auto">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">
+        <i class="fas fa-key"></i>
+      </span>
+    </div>
+    <input type="password" class="form-control" placeholder="Senha"  aria-describedby="basic-addon1">
+  </div>
+
+  <button type="submit" class="btn btn-logon mt-4">Entrar</button>
+</form>
+
+<div class="row cards">
+  <div class="logo-persona img-fluid col-md-3">
+    <img id="img-left" src="../../../assets/img/pessoas-login.png" alt="logo-persona">
+  </div>
+  <div class="register col-md-6">
+    <p class="description">Faça seu cadatro, e gerencie suas tarefas com facilidade!</p>
+    <div class="input-group group-register" >
+      <button class="btn-register" [routerLink="['/cadastro']">
+        <i class="fas fa-sign-out-alt mr-2 white"></i>Cadastrar
+      </button>
+    </div>
+  </div>
+  <div class="logo-tasks img-fluid col-md-3">
+    <img id="img-right" src="../../../assets/img/Tasks_Header.png" alt="logo-tasks">
+  </div>
+</div>
+

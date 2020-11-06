@@ -6,9 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DescricaoCadastroComponent } from './components/descricao-cadastro/descricao-cadastro.component';
 import { FormCadastroComponent } from './components/form-cadastro/form-cadastro.component';
 import { HeaderHomeComponent } from './components/header-home/header-home.component';
-import { CorpoHomeComponent } from './components/corpo-home/corpo-home.component';
+import { CardsHomeComponent } from './components/cards-home/cards-home.component';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { HomeComponent } from './views/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './views/login/login.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
@@ -16,13 +20,16 @@ import { HomeComponent } from './views/home/home.component';
     DescricaoCadastroComponent,
     FormCadastroComponent,
     HeaderHomeComponent,
-    CorpoHomeComponent,
     CadastroComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent,
+    CardsHomeComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

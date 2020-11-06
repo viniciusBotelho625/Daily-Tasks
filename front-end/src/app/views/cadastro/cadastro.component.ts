@@ -8,6 +8,8 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class CadastroComponent implements OnInit {
 
+  users: any
+
   constructor(
     private usersService: UsersService
   ) { }
@@ -15,7 +17,7 @@ export class CadastroComponent implements OnInit {
   ngOnInit(): void {
     this.usersService.getUsers().subscribe(
       (data) => {
-        console.log(data)
+        this.users = data['users'];
       },
       (error) => {
         console.log(error)
