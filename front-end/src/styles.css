@@ -24,3 +24,7 @@ input,
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
+.bg-dashboard {
+  background-color: #C1BDBD !important;
+}

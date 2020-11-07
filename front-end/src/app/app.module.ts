@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './views/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormLogonComponent } from './components/form-logon/form-logon.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { CardDashboardComponent } from './components/card-dashboard/card-dashboard.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { FormLogonComponent } from './components/form-logon/form-logon.component
     HomeComponent,
     LoginComponent,
     CardsHomeComponent,
-    FormLogonComponent
+    FormLogonComponent,
+    DashboardComponent,
+    CardDashboardComponent
   ],
   imports: [
     BrowserModule,
