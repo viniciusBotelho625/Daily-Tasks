@@ -1,13 +1,12 @@
 .form-group{
     align-items: center !important;
 }
-.porta{
-    size: 10px ;
-}
+
 ::placeholder{
-    color: black;
+    color: rgb(100, 100, 100);
 }
-#nome, #email, #senha, #btnSalvar{
+
+input, #btnSalvar{
     border-radius: 7px !important;
 }
 

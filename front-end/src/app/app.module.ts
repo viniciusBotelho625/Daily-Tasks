@@ -13,6 +13,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './views/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormLogonComponent } from './components/form-logon/form-logon.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+import { FormsModule } from '@angular/forms';
+
+
 
 
 @NgModule({
@@ -31,7 +36,9 @@ import { FormLogonComponent } from './components/form-logon/form-logon.component
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSnackBarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

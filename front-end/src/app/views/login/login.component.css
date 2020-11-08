@@ -41,7 +41,7 @@
 }
 #img-left {
   position: absolute;
-  bottom: -35%;
+  bottom: -60%;
   left: 0;
   width: 100%;
 }
@@ -51,7 +51,7 @@
   z-index: 1;
   bottom: 0;
   right:0;
-  bottom: -25%;
+  bottom: -48%;
   width: 100%;
 }
 
