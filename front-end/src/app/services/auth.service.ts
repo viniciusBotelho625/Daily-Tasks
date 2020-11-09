@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { BehaviorSubject, Observable, throwError } from 'rxjs';
-// import { environment } from '../../environments/environment'
+
 
 import { User, UserResponse } from '../models/user.interface';
 import { catchError, map } from 'rxjs/operators';
@@ -22,6 +23,7 @@ export class AuthService {
 
   constructor(
     private http: HttpClient,
+    private snackBar: MatSnackBar,
     private router: Router) {
     this.checkToken();
   }
@@ -29,13 +31,14 @@ export class AuthService {
   get islogged(): Observable<boolean>{
     return this.loggedIn.asObservable();
   }
-  // showMessage(msg: string): void {
-  //   this.snackBar.open(msg, 'X', {
-  //     duration: 3000,
-  //     horizontalPosition: "center",
-  //     verticalPosition: "top",
-  //   })
-  // }
+
+  showMessage(msg: string): void {
+    this.snackBar.open(msg, 'X', {
+      duration: 3000,
+      horizontalPosition: "center",
+      verticalPosition: "top",
+    })
+  }
 
   login(authData: User): Observable<UserResponse | void> {
     return this.http
@@ -61,12 +64,6 @@ export class AuthService {
     console.log('isExpired ->', isExpired);
 
     isExpired ? this.logout() : this.loggedIn.next(true);
-
-      // if (isExpired) {
-      //   this.logout();
-      // } else {
-      //   this.loggedIn.next(true)
-      // }
   }
 
   private saveToken(token: string): void {
@@ -78,7 +75,7 @@ export class AuthService {
     if (err) {
       errorMessage = `Error: code ${err.message}`;
     }
-    window.alert(errorMessage);
+    this.showMessage('Falha na autenticação')
     return throwError(errorMessage);
   }
 }

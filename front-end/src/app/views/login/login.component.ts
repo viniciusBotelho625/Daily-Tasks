@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
   }
 
   navigateToRegister(): void {
-    this.router.navigate(['/cadastro'])
+    this.router.navigate(['/users'])
     document.body.classList.add('bg-register');
   }
 }
