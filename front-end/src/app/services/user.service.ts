@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
-import { User } from '../components/form-cadastro/user.model';
+import { User } from '../models/user.interface';
+
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,6 @@ export class UsersService {
       verticalPosition: "top",
     })
   }
-
 
   create(user: User): Observable<User> {
     return this.http.post<User>(this.baseUrl, user)

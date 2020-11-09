@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
-import { User } from './user.model';
+import { User } from 'src/app/models/user.interface';
+
 @Component({
   selector: 'app-form-cadastro',
   templateUrl: './form-cadastro.component.html',
@@ -9,7 +10,7 @@ import { User } from './user.model';
 })
 export class FormCadastroComponent implements OnInit {
 
-  user: User= {
+  user: User = {
     name: '',
     email: '',
     password: null

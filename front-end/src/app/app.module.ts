@@ -14,7 +14,8 @@ import { LoginComponent } from './views/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormLogonComponent } from './components/form-logon/form-logon.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
 import { FormsModule } from '@angular/forms';
 
 
@@ -38,9 +39,10 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     AppRoutingModule,
     MatSnackBarModule,
+    ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
