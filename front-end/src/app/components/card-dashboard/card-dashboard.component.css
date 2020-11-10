@@ -3,15 +3,38 @@
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
   }
 
-.jumbotron{
+.card{
     background-color: #DC1845 !important;
+    cursor: pointer;
 }
 
-a{
-    text-decoration-color: transparent !important;
-    color: white !important;
+.card:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.1);
+  transition: 0.4s;
 }
+
+.card-item{
+  height: 230px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.text-item {
+  color: white;
+  display: flex;
+  font-size: 22px;
+  margin: 0;
+}
+
 .btn-danger{
     background-color: transparent;
     border-color: transparent;
+}
+
+svg {
+  color: white;
+  margin: 0;
 }
