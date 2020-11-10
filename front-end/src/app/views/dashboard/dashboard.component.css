@@ -1,0 +1,33 @@
+.topo {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.topo img {
+  width: 250px;
+  display: flex;
+  margin-top: -30px;
+}
+
+button{
+  padding: 5px;
+  width: 120px;
+  height: 40px;
+  align-items: center;
+  display: flex;
+  border-radius: 7px;
+  text-align: center;
+}
+
+button:hover{
+  border: none;
+  background-color: #999999 ;
+}
+
+h3{
+  text-align: center;
+}
+
+span {
+  align-items: center;
+}

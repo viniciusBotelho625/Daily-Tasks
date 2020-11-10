@@ -15,3 +15,24 @@
 .topo img {
   width: 250px;
 }
+
+
+
+
+/*css do botão de sair*/
+button{
+  padding: 5px;
+  width: 100px;
+  height: 35px;
+  display: grid;
+  margin-left: auto;
+  margin-right: -60%;
+  margin-top: -50px;
+  border-radius: 7px;
+
+  background: #999999;
+  }
+
+  button:hover{
+    background-color: rgb(204, 204, 204);
+  }

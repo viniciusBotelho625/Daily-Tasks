@@ -31,7 +31,10 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     LoginComponent,
     CardsHomeComponent,
-    FormLogonComponent
+    FormLogonComponent,
+    DashboardComponent,
+    CardDashboardComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
