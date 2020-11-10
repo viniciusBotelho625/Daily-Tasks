@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormLogonComponent } from './components/form-logon/form-logon.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { CardDashboardComponent } from './components/card-dashboard/card-dashboard.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { CardDashboardComponent } from './components/card-dashboard/card-dashboa
     CardsHomeComponent,
     FormLogonComponent,
     DashboardComponent,
-    CardDashboardComponent
+    CardDashboardComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

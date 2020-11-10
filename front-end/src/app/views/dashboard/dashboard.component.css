@@ -1,28 +1,33 @@
+.topo {
+  justify-content: space-between;
+  width: 100%;
+}
+
 .topo img {
-    width: 250px;
-    display: flex;
-    margin-left: 35px;
-    margin-top: -30px;
-  }
+  width: 250px;
+  display: flex;
+  margin-top: -30px;
+}
 
-  button{
+button{
   padding: 5px;
-  width: 100px;
-  height: 35px;
-  display: grid;
-  margin-left: auto;
-  margin-right: 75px;
-  margin-top: -80px;
+  width: 120px;
+  height: 40px;
+  align-items: center;
+  display: flex;
   border-radius: 7px;
+  text-align: center;
+}
 
-  background: #999999;
-  }
+button:hover{
+  border: none;
+  background-color: #999999 ;
+}
 
-  button:hover{
-    background-color: rgb(204, 204, 204);
-  }
+h3{
+  text-align: center;
+}
 
-  h3{
-    text-align: center;
-    margin-top: 20vh !important;
-  }
+span {
+  align-items: center;
+}

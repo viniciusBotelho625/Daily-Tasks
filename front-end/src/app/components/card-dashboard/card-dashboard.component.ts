@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-card-dashboard',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardDashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(public modal: ModalComponent) { }
 
   ngOnInit(): void {
   }
-
 }
