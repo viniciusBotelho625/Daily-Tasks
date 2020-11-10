@@ -8,7 +8,8 @@ import { LoginComponent } from './views/login/login.component';
 const routes: Routes = [
   { path: '', component: LoginComponent},
   { path: 'users', component: CadastroComponent},
-  { path: 'home', component: HomeComponent}
+  { path: 'dashboard', component: DashboardComponent},
+  { path: 'home', component: HomeComponent},
 ];
 
 

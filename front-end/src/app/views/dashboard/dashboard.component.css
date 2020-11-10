@@ -6,7 +6,6 @@
 .topo img {
   width: 250px;
   display: flex;
-  margin-top: -30px;
 }
 
 button{
@@ -17,6 +16,7 @@ button{
   display: flex;
   border-radius: 7px;
   text-align: center;
+  margin-top: 20px;
 }
 
 button:hover{
@@ -26,6 +26,7 @@ button:hover{
 
 h3{
   text-align: center;
+  font-size: 24px;
 }
 
 span {

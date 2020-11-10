@@ -6,7 +6,6 @@
   height: 100%;
   margin: 0;
   padding: 0;
-  /* background-image: url(./assets/img/Fundo-login.png); */
 }
 
 p {
@@ -29,12 +28,9 @@ input,
   overflow-y: hidden;
 }
 
-<<<<<<< HEAD
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-=======
 .bg-dashboard {
   background-color: #C1BDBD !important;
 }
->>>>>>> front-end

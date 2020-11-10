@@ -8,7 +8,7 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class CardDashboardComponent implements OnInit {
 
-  constructor(public modal: ModalComponent) { }
+  constructor() { }
 
   ngOnInit(): void {
   }

@@ -27,7 +27,7 @@ export class FormLogonComponent implements OnInit {
     const formValue = this.loginForm.value;
     this.authService.login(formValue).subscribe((res) => {
       if (res) {
-        this.router.navigate(['home']);
+        this.router.navigate(['dashboard']);
       }
     });
   }

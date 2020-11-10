@@ -7,16 +7,18 @@ import { DescricaoCadastroComponent } from './components/descricao-cadastro/desc
 import { FormCadastroComponent } from './components/form-cadastro/form-cadastro.component';
 import { HeaderHomeComponent } from './components/header-home/header-home.component';
 import { CardsHomeComponent } from './components/cards-home/cards-home.component';
-import { CadastroComponent } from './views/cadastro/cadastro.component';
-import { HomeComponent } from './views/home/home.component';
-import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './views/login/login.component';
-import { AppRoutingModule } from './app-routing.module';
+import { CardDashboardComponent } from './components/card-dashboard/card-dashboard.component'
 import { FormLogonComponent } from './components/form-logon/form-logon.component';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './views/login/login.component';
+import { DashboardComponent } from './views/dashboard/dashboard.component'
+import { HomeComponent } from './views/home/home.component';
+import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { AuthService } from './services/auth.service';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -34,7 +36,6 @@ import { FormsModule } from '@angular/forms';
     FormLogonComponent,
     DashboardComponent,
     CardDashboardComponent,
-    ModalComponent
   ],
   imports: [
     BrowserModule,
