@@ -1,12 +1,75 @@
+html,
+body {
+  height: 100%;
+}
 .container {
   display: block;
+  margin-top: 50px;
+  border-radius: 5px;
+  background: #e2dada;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
 }
-.corpo {
+.card {
   background: #e9e7e7;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
 }
-.titulo h3 {
-  text-align: center;
-  margin-top: 7%;
-  margin-bottom: 5%;
+
+.card-body {
+  padding: 25px;
 }
+.logo-adicionar img {
+  position: absolute;
+  left: 85%;
+  top: 91%;
+  color: #ff2623;
+}
+
+.logo-anotacao img {
+  position: absolute;
+  left: 72%;
+  top: 92%;
+}
+
+.logo-calendario img {
+  position: absolute;
+  height: auto;
+  left: 2%;
+  top: 23%;
+}
+
+.logo-salvar img {
+  position: absolute;
+  left: 0%;
+  top: 89%;
+}
+
+.logo-apagar img {
+  position: absolute;
+  left: 20%;
+  top: 92%;
+}
+
+.logo-expiracao img {
+  position: absolute;
+  top: 80%;
+  left: 2%;
+}
+
+.logo-inicio {
+  position: absolute;
+  top: 25%;
+  left: 6%;
+}
+
+.logo-concluidos {
+  position: absolute;
+  top: 29%;
+  left: 7%;
+}
+
+.logo-perfil {
+  position: absolute;
+  top: 33%;
+  left: 4%;
+}
+

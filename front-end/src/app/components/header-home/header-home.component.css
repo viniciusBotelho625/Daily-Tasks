@@ -1,9 +1,10 @@
 .texto {
   display: inline-block;
   position: absolute;
+  left: 33%;
   width: 40%;
   height: 20%;
-  top: 6%;
+  top: 13%;
 }
 .botao {
   position: absolute;
@@ -13,6 +14,8 @@
   top: 5%;
 }
 .topo img {
+  margin-top: 45px;
+  margin-left: 65px;
   width: 250px;
 }
 
