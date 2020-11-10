@@ -4,11 +4,15 @@ import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { HomeComponent } from './views/home/home.component';
 import { LoginComponent } from './views/login/login.component';
+import { TasksComponent } from './views/tasks/tasks.component';
+
+
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
   { path: 'users', component: CadastroComponent},
   { path: 'dashboard', component: DashboardComponent},
+  { path: 'tasks', component: TasksComponent},
   { path: 'home', component: HomeComponent},
 ];
 

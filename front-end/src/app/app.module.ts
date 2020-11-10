@@ -19,6 +19,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AppRoutingModule } from './app-routing.module';
+import { TasksComponent } from './views/tasks/tasks.component';
+import { FormTasksComponent } from './components/form-tasks/form-tasks.component';
 
 
 
@@ -36,6 +38,8 @@ import { AppRoutingModule } from './app-routing.module';
     FormLogonComponent,
     DashboardComponent,
     CardDashboardComponent,
+    TasksComponent,
+    FormTasksComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     MatSnackBarModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
