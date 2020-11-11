@@ -4,7 +4,7 @@ body {
 }
 .container {
   display: block;
-  margin-top: 50px;
+  margin-right: 10px;
   border-radius: 5px;
   background: #e2dada;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
@@ -37,6 +37,12 @@ body {
   top: 23%;
 }
 
+.logo-sino img {
+  position: absolute;
+  left: 41%;
+  top: 28%;
+}
+
 .logo-salvar img {
   position: absolute;
   left: 0%;
@@ -63,13 +69,63 @@ body {
 
 .logo-concluidos {
   position: absolute;
-  top: 29%;
+  top: 30%;
   left: 7%;
 }
 
 .logo-perfil {
   position: absolute;
-  top: 33%;
+  top: 34%;
   left: 4%;
 }
+
+h1 {
+  color: #ffffff;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 50%;
+  margin-bottom: 30%;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+  padding: 20px 5px;
+  color: white;
+}
+
+a:hover {
+  background-color: #d18f8f;
+  color: black;
+  transition-duration: 1s;
+}
+
+label img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 0px;
+  top: 13px;
+}
+
+.sidebar {
+  position: absolute;
+  height: 1000px;
+  width: 188px;
+  top: 0px;
+  left: 0px;
+  float: left;
+  overflow-y: auto;
+  background-color: #dc1845;
+}
+.sidebar-menu {
+  margin: 20px 0;
+}
+.sidebar-menu,
+a {
+  margin-left: 40px;
+  display: block;
+  padding: 10px;
+}
+
 
