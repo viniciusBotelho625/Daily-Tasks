@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-dashboard',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardDashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigateToTasks(): void {
+    this.router.navigate(['/tasks'])
   }
 }

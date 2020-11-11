@@ -12,5 +12,4 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
     document.body.classList.add('bg-dashboard');
   }
-
 }
