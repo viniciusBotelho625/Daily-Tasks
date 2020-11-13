@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { DescricaoCadastroComponent } from './components/descricao-cadastro/descricao-cadastro.component';
 import { FormCadastroComponent } from './components/form-cadastro/form-cadastro.component';
 import { HeaderHomeComponent } from './components/header-home/header-home.component';
@@ -16,11 +16,12 @@ import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { AuthService } from './services/auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AppRoutingModule } from './app-routing.module';
 import { TasksComponent } from './views/tasks/tasks.component';
 import { FormTasksComponent } from './components/form-tasks/form-tasks.component';
+import { TokenInterceptor } from './interceptors/token.interceptor';
 
 
 
@@ -50,7 +51,10 @@ import { FormTasksComponent } from './components/form-tasks/form-tasks.component
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [AuthService],
-  bootstrap: [AppComponent]
+  providers: [
+    AuthService,
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

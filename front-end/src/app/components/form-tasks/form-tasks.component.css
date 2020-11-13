@@ -21,7 +21,7 @@
 }
 
 button {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .date {
@@ -35,5 +35,6 @@ button {
 
 textarea {
   height: 180px;
+  border: 1px solid rgb(155, 154, 154);
 }
 
