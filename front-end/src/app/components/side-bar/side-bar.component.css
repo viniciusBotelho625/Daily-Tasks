@@ -5,13 +5,16 @@
   background-color: #dc1845;
 }
 
-.sidebar-menu {
-  margin: 20px 0;
+.nav-item {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-left: 8%;
+  cursor: pointer;
 }
 
-.sidebar-menu,
-a {
-  margin-left: 40px;
-  display: block;
-  padding: 10px;
+.nav-item:hover {
+
+
 }
+

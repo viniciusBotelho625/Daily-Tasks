@@ -1,13 +1,9 @@
-.logo-sino img {
-    position: absolute;
-    left: 45%;
-    top: 39%;
-  }
+.titulo {
+  display: flex;
+  align-items: center;
+}
 
 h3 {
-    margin-top: 10%;
-    margin-left: 15%;
-    margin-bottom: 3%;
-    font-size: 30px;
-    text-align: center;
-  }
+  margin-left: 15%;
+  font-size: 24px;
+}

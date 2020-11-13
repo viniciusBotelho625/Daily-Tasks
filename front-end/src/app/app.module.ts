@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { DescricaoCadastroComponent } from './components/descricao-cadastro/descricao-cadastro.component';
 import { FormCadastroComponent } from './components/form-cadastro/form-cadastro.component';
-import { HeaderHomeComponent } from './components/header-home/header-home.component';
+import { HeaderComponent } from './components/header/header.component';
 import { CardsHomeComponent } from './components/cards-home/cards-home.component';
 import { CardDashboardComponent } from './components/card-dashboard/card-dashboard.component'
 import { FormLogonComponent } from './components/form-logon/form-logon.component';
@@ -32,7 +32,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     AppComponent,
     DescricaoCadastroComponent,
     FormCadastroComponent,
-    HeaderHomeComponent,
+    HeaderComponent,
     CadastroComponent,
     HomeComponent,
     LoginComponent,

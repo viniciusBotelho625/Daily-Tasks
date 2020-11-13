@@ -1,25 +1,32 @@
 <div class="sidebar">
-  <div class="logo-inicio">
-  </div>
-  <div class="logo-perfil">
-
-  </div>
-  <div class="logo-concluidos">
-
-  </div>
   <div class="sidebar-wraper">
     <div class="sidebar-titulo">
-      <label for="chec">
-
-      </label>
+      <span>
+        <i class="fas fa-bars"></i>
+      </span>
       <div class="titulo-sidebar">
         <h1>Bem vindo, Vinicius</h1>
       </div>
     </div>
-    <div class="siderbar-menu">
-      <a class="item-menu" routerLinkActive="/home">Inicio</a>
-      <a class="item-menu" routerLinkActive="">Concluídos</a>
-      <a class="item-menu" routerLinkActive="/home">Perfil</a>
-    </div>
+    <ul class="nav siderbar-menu">
+      <li class="nav-item" routerLinkActive="/home">
+        <span>
+          <i class="fas fa-home"></i>
+        </span>
+        <a class="nav-link">Inicio</a>
+      </li>
+      <li class="nav-item" routerLinkActive="">
+        <span>
+          <i class="fas fa-clipboard-list"></i>
+        </span>
+        <a class="nav-link">Concluídos</a>
+      </li>
+      <li class="nav-item" routerLinkActive="">
+        <span>
+          <i class="fas fa-user"></i>
+        </span>
+        <a class="nav-link">Perfil</a>
+      </li>
+    </ul>
   </div>
 </div>
