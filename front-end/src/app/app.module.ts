@@ -22,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TasksComponent } from './views/tasks/tasks.component';
 import { FormTasksComponent } from './components/form-tasks/form-tasks.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
 
 
 
@@ -41,6 +42,7 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
     CardDashboardComponent,
     TasksComponent,
     FormTasksComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,

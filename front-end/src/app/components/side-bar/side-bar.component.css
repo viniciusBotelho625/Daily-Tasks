@@ -1,0 +1,17 @@
+.sidebar {
+  height: 100%;
+  position: fixed;
+  width: 188px;
+  background-color: #dc1845;
+}
+
+.sidebar-menu {
+  margin: 20px 0;
+}
+
+.sidebar-menu,
+a {
+  margin-left: 40px;
+  display: block;
+  padding: 10px;
+}

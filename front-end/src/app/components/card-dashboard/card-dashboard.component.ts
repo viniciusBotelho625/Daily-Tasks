@@ -16,4 +16,8 @@ export class CardDashboardComponent implements OnInit {
   navigateToTasks(): void {
     this.router.navigate(['/tasks'])
   }
+
+  navigateToHome(): void {
+    this.router.navigate(['/home'])
+  }
 }
