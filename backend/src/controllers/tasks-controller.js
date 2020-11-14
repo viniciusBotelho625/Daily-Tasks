@@ -12,7 +12,7 @@ exports.getTasks = (req, res, next) => {
             [req.usuario.id],
             (error, resultado, field) => {
                 if (error) { return res.status(500).send({ error: error })}
-                return res.status(200).send({response: resultado})
+                return res.status(200).send(resultado)
             }
         )
     })
@@ -56,7 +56,7 @@ exports.getConcluidTasks = (req, res, next) => {
             [req.usuario.id],
             (error, resultado, field) => {
                 if (error) { return res.status(500).send({ error: error })}
-                return res.status(200).send({response: resultado})
+                return res.status(200).send( resultado)
             }
         )
     })

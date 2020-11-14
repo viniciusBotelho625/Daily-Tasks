@@ -5,16 +5,37 @@
   background-color: #dc1845;
 }
 
+.name,
+h1 {
+  font-size: 18px;
+  margin-top: -5px;
+  font-style: italic;
+}
+
 .nav-item {
   color: white;
   display: flex;
   align-items: center;
-  margin-left: 8%;
+  padding-left: 8%;
   cursor: pointer;
+  width: 100%;
 }
 
 .nav-item:hover {
-
-
+  background-color: rgb(143, 145, 146);
+  width: 100%;
+  transition: 0.4s;
 }
 
+a {
+  list-style: none;
+  color: white;
+  text-align: justify;
+}
+
+
+.titulo-sidebar {
+  color: white;
+  margin-left: 8%;
+  margin-top: 50%;
+}

@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Tasks } from '../models/task.interface';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,5 +25,9 @@ export class TaskService {
 
   create(tasks: Tasks): Observable<Tasks> {
     return this.http.post<Tasks>(this.baseUrl, tasks)
+  }
+
+  select(): Observable<Tasks[]> {
+    return this.http.get<Tasks[]>(this.baseUrl)
   }
 }

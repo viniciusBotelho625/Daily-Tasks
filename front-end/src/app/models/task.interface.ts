@@ -1,7 +1,8 @@
 export interface Tasks {
   id?: number,
-  date_start: Date,
-  date_end: Date,
-  title: String,
-  description: string
+  dt_cadastro: Date,
+  dt_termino: Date,
+  titulo: string,
+  descricao: string,
+  nome?: string
 }

@@ -14,8 +14,34 @@
   padding: 25px;
 }
 
+.text-start,
+.text-end {
+  display: flex;
+  align-items: center;
+}
 
+.btn-excluir,
+.btn-finishi,
+.btn-new {
+  background-color: none;
+  border: none;
+  cursor: pointer;
+}
 
+.fa-check-circle {
+  color: green;
+}
+
+.fa-times-circle,
+.fa-plus,
+.fa-calendar-alt,
+.fa-calendar-check {
+  color: red;
+}
+
+.text-description{
+  height: 200px;
+}
 
 
 

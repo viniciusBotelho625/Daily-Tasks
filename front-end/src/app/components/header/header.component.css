@@ -4,8 +4,12 @@
 }
 
 .topo img {
-  width: 250px;
+  width: 280px;
+  margin-top: -5%;
+  margin-left: -2%;
   display: flex;
+  z-index: 1;
+  position: fixed;
 }
 
 button{

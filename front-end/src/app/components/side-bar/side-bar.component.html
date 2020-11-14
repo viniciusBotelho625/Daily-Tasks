@@ -1,31 +1,35 @@
 <div class="sidebar">
   <div class="sidebar-wraper">
     <div class="sidebar-titulo">
-      <span>
-        <i class="fas fa-bars"></i>
-      </span>
       <div class="titulo-sidebar">
-        <h1>Bem vindo, Vinicius</h1>
+        <h1>Bem vindo,</h1>
+        <p class="name">Vinicius</p>
       </div>
     </div>
     <ul class="nav siderbar-menu">
-      <li class="nav-item" routerLinkActive="/home">
+      <li class="nav-item">
         <span>
           <i class="fas fa-home"></i>
         </span>
-        <a class="nav-link">Inicio</a>
+        <a class="nav-link" routerLink="/home" routerLinkActive="home">Inicio</a>
       </li>
       <li class="nav-item" routerLinkActive="">
         <span>
           <i class="fas fa-clipboard-list"></i>
         </span>
-        <a class="nav-link">Concluídos</a>
+        <a class="nav-link" routerLink="/tasks-finishi" routerLinkActive="Concluídos">Concluídos</a>
       </li>
-      <li class="nav-item" routerLinkActive="">
+      <li class="nav-item" routerLinkActive="tasks-finishi">
         <span>
           <i class="fas fa-user"></i>
         </span>
         <a class="nav-link">Perfil</a>
+      </li>
+      <li class="nav-item" (click)="onLogout()">
+        <span>
+          <i class="fas fa-power-off"></i>
+        </span>
+        <a class="nav-link">Sair</a>
       </li>
     </ul>
   </div>

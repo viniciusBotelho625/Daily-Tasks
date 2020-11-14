@@ -23,6 +23,7 @@ import { TasksComponent } from './views/tasks/tasks.component';
 import { FormTasksComponent } from './components/form-tasks/form-tasks.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { TasksFinishiComponent } from './views/tasks-finishi/tasks-finishi.component';
 
 
 
@@ -43,6 +44,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     TasksComponent,
     FormTasksComponent,
     SideBarComponent,
+    TasksFinishiComponent,
   ],
   imports: [
     BrowserModule,

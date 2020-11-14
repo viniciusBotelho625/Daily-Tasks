@@ -20,7 +20,7 @@
           </div>
           <input
             type="date" class="form-control" aria-describedby="basic-addon1"
-            [(ngModel)]="task.date_start" name="date-start"
+            [(ngModel)]="task.dt_cadastro" name="date-start"
             required
           >
         </div>
@@ -34,7 +34,7 @@
         </div>
         <input
           type="date" class="form-control" aria-describedby="basic-addon1"
-          [(ngModel)]="task.date_end" name="date-end"
+          [(ngModel)]="task.dt_termino" name="date-end"
           required
         >
       </div>
@@ -51,7 +51,7 @@
         <input
           type="text" class="form-control"
           placeholder="Titulo" aria-describedby="basic-addon1"
-          [(ngModel)]="task.title" name="title"
+          [(ngModel)]="task.titulo" name="title"
           required
           >
       </div>
@@ -60,7 +60,7 @@
       <div class="form-group col-12">
         <label for="description">Descrição:</label>
         <textarea class="form-control" aria-label="With textarea"
-        [(ngModel)]="task.description" name="description"
+        [(ngModel)]="task.descricao" name="description"
         required></textarea>
       </div>
     </div>

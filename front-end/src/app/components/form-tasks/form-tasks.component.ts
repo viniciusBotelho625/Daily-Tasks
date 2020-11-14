@@ -11,10 +11,10 @@ import { TaskService } from 'src/app/services/task.service';
 export class FormTasksComponent implements OnInit {
 
   task: Tasks = {
-    date_start: null,
-    date_end: null,
-    title: '',
-    description: ''
+    dt_cadastro: null,
+    dt_termino: null,
+    titulo: '',
+    descricao: ''
   }
 
   constructor(private taskService: TaskService, private router: Router) { }
