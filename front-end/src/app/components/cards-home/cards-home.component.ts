@@ -13,20 +13,20 @@ export class CardsHomeComponent implements OnInit {
 
   tasks: Tasks[]
 
-
-  testes = ['ana', 'viviane', 'beterraba']
-
   constructor(private router: Router, private tasksService: TaskService) { }
 
   ngOnInit(): void {
     this.tasksService.select().subscribe(tasks => {
       this.tasks = tasks
       console.log(tasks)
-      console.log(this.testes)
     })
   }
 
   navigateToTasks(): void {
     this.router.navigate(['/tasks'])
+  }
+
+  concluidTask() {
+
   }
 }

@@ -25,10 +25,10 @@ exports.postTasks = (req, res, next) => {
             `INSERT INTO lembretes (dt_cadastro, dt_termino, titulo, descricao, concluido, usuario_id) 
             VALUES (?, ?, ?, ?, FALSE, ?)`,
             [
-                req.body.date_start,
-                req.body.date_end,
-                req.body.title,
-                req.body.description,
+                req.body.dt_cadastro,
+                req.body.dt_termino,
+                req.body.titulo,
+                req.body.descricao,
                 req.usuario.id
             ],
             (error, resultado, field) => {

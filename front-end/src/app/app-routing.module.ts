@@ -15,7 +15,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent},
   { path: 'tasks', component: TasksComponent},
   { path: 'home', component: HomeComponent},
-  { path: 'tasks-concluded', component: TasksFinishiComponent},
+  { path: 'home/:id', component: HomeComponent},
+  { path: 'my-tasks/tasks-finishi', component: TasksFinishiComponent}
 ];
 
 

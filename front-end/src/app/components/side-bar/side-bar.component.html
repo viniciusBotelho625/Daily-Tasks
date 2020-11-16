@@ -11,25 +11,25 @@
         <span>
           <i class="fas fa-home"></i>
         </span>
-        <a class="nav-link" routerLink="/home" routerLinkActive="home">Inicio</a>
+        <a class="nav-link" routerLink="/home">Inicio</a>
       </li>
-      <li class="nav-item" routerLinkActive="">
+      <li class="nav-item">
         <span>
           <i class="fas fa-clipboard-list"></i>
         </span>
-        <a class="nav-link" routerLink="/tasks-finishi" routerLinkActive="Concluídos">Concluídos</a>
+        <a class="nav-link" routerLink="/my-tasks/tasks-finishi">Concluídos</a>
       </li>
-      <li class="nav-item" routerLinkActive="tasks-finishi">
+      <li class="nav-item">
         <span>
           <i class="fas fa-user"></i>
         </span>
         <a class="nav-link">Perfil</a>
       </li>
-      <li class="nav-item" (click)="onLogout()">
+      <li class="nav-item">
         <span>
           <i class="fas fa-power-off"></i>
         </span>
-        <a class="nav-link">Sair</a>
+        <a class="nav-link" (click)="onLogout()">Sair</a>
       </li>
     </ul>
   </div>
