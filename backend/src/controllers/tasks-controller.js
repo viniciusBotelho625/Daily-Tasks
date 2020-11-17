@@ -67,7 +67,7 @@ exports.deleteTasks = (req, res, next) => {
         if (error) { return res.status(500).send({ error: error })}
         conn.query(
             'DELETE FROM lembretes WHERE id = ?',
-            [req.body.id],
+            [req.params.id],
             (error, resultado, field) => {
                 if (error) { return res.status(202).send({ error: error })}
 

@@ -27,8 +27,6 @@ import { TasksFinishiComponent } from './views/tasks-finishi/tasks-finishi.compo
 
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +44,7 @@ import { TasksFinishiComponent } from './views/tasks-finishi/tasks-finishi.compo
     FormTasksComponent,
     SideBarComponent,
     TasksFinishiComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -54,7 +53,7 @@ import { TasksFinishiComponent } from './views/tasks-finishi/tasks-finishi.compo
     AppRoutingModule,
     MatSnackBarModule,
     ReactiveFormsModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [
     AuthService,

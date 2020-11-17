@@ -1,41 +1,42 @@
 <div class="container mb-5">
-  <div class="row">
-  <div class="col-md-3 mt-5 mb-5 card-task" *ngFor="let task of tasks">
-    <div class="card text-black bg-light mb-3">
-      <div class="card-header bg-danger"></div>
-      <div class="card-body">
-        <p class="card-title">Titulo: {{task.titulo}}</p>
-        <div class="text-start">
-          <span>
-            <i class="far fa-calendar-alt"></i>
-          </span>
-          <p class="card-text ml-4">Criação: {{task.dt_cadastro | date: "dd/MM/yyyy"}}.</p>
+  <div class="row" >
+    <div class="col-md-3 mt-5 mb-5 card-task" *ngFor="let task of tasks">
+      <div class="card text-black bg-light mb-3">
+        <div class="card-header bg-danger"></div>
+        <div class="card-body">
+          <p class="card-title">Titulo: {{task.titulo}}</p>
+          <div class="text-start">
+            <span>
+              <i class="far fa-calendar-alt"></i>
+            </span>
+            <p class="card-text ml-4">Criação: {{task.dt_cadastro | date: "dd/MM/yyyy"}}.</p>
+          </div>
+          <div class="text-description mt-3">
+            <p>Descrição:</p>
+            <p class="card-text">{{task.descricao}}</p>
+          </div>
+          <div class="text-end">
+            <span>
+              <i class="far fa-calendar-check"></i>
+            </span>
+            <p class="card-text ml-4">Expira em: {{task.dt_termino | date: "dd/MM/yyyy"}}</p>
+          </div>
         </div>
-        <div class="text-description mt-3">
-          <p>Descrição:</p>
-          <p class="card-text">{{task.descricao}}</p>
-        </div>
-        <div class="text-end">
-          <span>
-            <i class="far fa-calendar-check"></i>
-          </span>
-          <p class="card-text ml-4">Expira em: {{task.dt_termino | date: "dd/MM/yyyy"}}</p>
-        </div>
-      </div>
-      <div class="card-footer">
-        <button class="btn-finishi">
-          <i class="fas fa-check-circle fa-2x"></i>
-        </button>
-          <button class="btn-excluir" (click)="concluidTask()">
-            <i class="fas fa-times-circle fa-2x"></i>
+        <div class="card-footer">
+          <button class="btn-finishi">
+            <i class="fas fa-check-circle fa-2x"></i>
           </button>
-        <button class="btn-new fa-1x float-right" (click)="navigateToTasks()">
-          <i class="fas fa-plus"></i>
-        </button>
+            <button class="btn-excluir" (click)="onDelete(task.id)">
+              <i class="fas fa-times-circle fa-2x"></i>
+            </button>
+          <button class="btn-new fa-1x float-right" (click)="navigateToTasks()">
+            <i class="fas fa-plus"></i>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <p class="mat-body-1" style="text-align: center;" *ngIf="tasks.length <= 0"> Nenhum lembrete cadastrado :(</p>
 </div>
 
 

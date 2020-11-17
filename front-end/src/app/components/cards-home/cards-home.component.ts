@@ -26,7 +26,9 @@ export class CardsHomeComponent implements OnInit {
     this.router.navigate(['/tasks'])
   }
 
-  concluidTask() {
-
+  onDelete(id: string) {
+    this.tasksService.delete(id);
+    this.tasksService.showMessage('Lembrete removido com sucesso!')
+    this.router.navigate(['home'])
   }
 }
