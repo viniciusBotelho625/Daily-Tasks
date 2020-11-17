@@ -26,7 +26,7 @@
           <button class="btn-finishi">
             <i class="fas fa-check-circle fa-2x"></i>
           </button>
-            <button class="btn-excluir" (click)="onDelete(task.id)">
+            <button class="btn-excluir" data-toggle="modal" data-target="#modalDelete">
               <i class="fas fa-times-circle fa-2x"></i>
             </button>
           <button class="btn-new fa-1x float-right" (click)="navigateToTasks()">
@@ -34,9 +34,30 @@
           </button>
         </div>
       </div>
+
+      <div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="modalDelete" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header bg-danger">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="text-white" aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Tem certeza que deseja excluir o lembrete?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="onDelete(task.id)">Excluir</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <p class="mat-body-1" style="text-align: center;" *ngIf="tasks.length <= 0"> Nenhum lembrete cadastrado :(</p>
 </div>
+
+
 
 

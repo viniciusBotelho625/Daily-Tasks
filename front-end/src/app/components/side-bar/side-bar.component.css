@@ -5,9 +5,8 @@
   background-color: #dc1845;
 }
 
-.name,
 h1 {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: -5px;
   font-style: italic;
 }

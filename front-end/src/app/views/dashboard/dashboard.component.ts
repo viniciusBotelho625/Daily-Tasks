@@ -11,7 +11,8 @@ export class DashboardComponent implements OnInit {
   constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
-    document.body.classList.add('bg-dashboard');
+    document.body.classList.remove('bg-login');
+    document.body.classList.add('bg-dashboard')
   }
 
   onLogout(): void {

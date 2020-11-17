@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    document.body.classList.remove('bg-dashboard');
+    document.body.classList.add('bg-home');
   }
 
 }

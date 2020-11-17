@@ -42,7 +42,6 @@ export class TaskService {
   delete(id: string): void{
     this.http.delete(`/api/tasks/${id}`)
     .subscribe(() => {
-      console.log ("Remoção feita com sucesso")
     });
   }
 }
