@@ -84,7 +84,7 @@ exports.putTasks = (req, res, next) => {
         if (error) { return res.status(500).send({ error: error })}
         conn.query(
             'UPDATE lembretes SET concluido = true WHERE id = ?',
-            [req.body.id],
+            [req.params.id],
             (error, resultado, field) => {
                 if (error) { return res.status(202).send({ error: error })}
 

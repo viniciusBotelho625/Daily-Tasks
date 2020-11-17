@@ -7,13 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  qtdeTasks: number = 200;
+
 
   constructor() { }
 
   ngOnInit(): void {
     document.body.classList.remove('bg-dashboard');
     document.body.classList.add('bg-home');
+
   }
 
 }

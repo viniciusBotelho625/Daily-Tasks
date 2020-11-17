@@ -9,6 +9,6 @@ router.get('/', login.mandatory, TasksController.getTasks, CounterTasks.counterT
 router.get('/concluidos/', login.mandatory, TasksController.getConcluidTasks);
 router.post('/', login.mandatory, TasksController.postTasks);
 router.delete('/:id', login.mandatory, TasksController.deleteTasks);
-router.put('/', login.mandatory, TasksController.putTasks);
+router.put('/:id', login.mandatory, TasksController.putTasks);
 
 module.exports = router;
