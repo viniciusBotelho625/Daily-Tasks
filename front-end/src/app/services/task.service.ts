@@ -2,7 +2,7 @@ import { HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Tasks } from '../models/task.interface';
 
 
@@ -12,10 +12,12 @@ import { Tasks } from '../models/task.interface';
 })
 export class TaskService {
 
+  private tasks: Tasks[] = [];
+  private listTask = new Subject<Tasks[]>();
 
   baseUrl = "/api/tasks"
 
-  constructor(private snackBar: MatSnackBar, private http: HttpClient, router: Router) {}
+  constructor(private snackBar: MatSnackBar, private http: HttpClient, private router: Router) {}
 
   showMessage(msg: string): void {
     this.snackBar.open(msg, 'X', {
@@ -37,5 +39,15 @@ export class TaskService {
     this.http.delete(`/api/tasks/${id}`)
     .subscribe(() => {
     });
+  }
+
+  readById(id: string): Observable<Tasks> {
+    const url = `${this.baseUrl}/${id}`
+    return this.http.get<Tasks>(url)
+  }
+
+  update(task: Tasks): Observable<Tasks> {
+    const url = `${this.baseUrl}/${task.id}`
+    return this.http.put<Tasks>(url, task)
   }
 }

@@ -18,6 +18,20 @@ exports.getTasks = (req, res, next) => {
     })
 };
 
+exports.getTasksId = (req, res, next) => {
+    mysql.getConnection((error, conn) =>{
+        if (error) { return res.status(500).send({ error: error })}
+        conn.query(
+            'SELECT * from lembretes WHERE id = ?',
+            [req.params.id],
+            (error, resultado, field) => {
+                if (error) { return res.status(500).send({ error: error })}
+                return res.status(200).send(resultado[0])
+            }
+        )
+    })
+};
+
 exports.postTasks = (req, res, next) => {
     mysql.getConnection((error, conn) => {
         if (error) { return res.status(500).send({ error: error })}
@@ -80,18 +94,44 @@ exports.deleteTasks = (req, res, next) => {
 };
 
 exports.putTasks = (req, res, next) => {
+    console.log(req.body)
+    console.log(req.params.id)
+    const { titulo, descricao} = req.body
+    const dt_cadastro = new Date(req.body.dt_cadastro).toISOString().split('T')[0]
+    const dt_termino = new Date(req.body.dt_termino).toISOString().split('T')[0]
     mysql.getConnection((error, conn) =>{
         if (error) { return res.status(500).send({ error: error })}
         conn.query(
-            'UPDATE lembretes SET concluido = true WHERE id = ?',
-            [req.params.id],
+            `UPDATE lembretes SET 
+                dt_cadastro = '${dt_cadastro}', 
+                dt_termino = '${dt_termino}', 
+                titulo = '${titulo}', 
+                descricao = '${descricao}' 
+            WHERE id = ${req.params.id}`,
             (error, resultado, field) => {
-                if (error) { return res.status(202).send({ error: error })}
+                if (error) { return res.status(500).send({ error: error })}
 
                 res.status(202).send({
-                    mensagem: 'Lembrete concluido com sucesso!',
+                    mensagem: 'Lembrete alterado com sucesso!',
                 })
             }
         )
     })
 };
+
+// exports.putTasks = (req, res, next) => {
+//     mysql.getConnection((error, conn) =>{
+//         if (error) { return res.status(500).send({ error: error })}
+//         conn.query(
+//             'UPDATE lembretes SET concluido = true WHERE id = ?',
+//             [req.params.id],
+//             (error, resultado, field) => {
+//                 if (error) { return res.status(202).send({ error: error })}
+
+//                 res.status(202).send({
+//                     mensagem: 'Lembrete concluido com sucesso!',
+//                 })
+//             }
+//         )
+//     })
+// };

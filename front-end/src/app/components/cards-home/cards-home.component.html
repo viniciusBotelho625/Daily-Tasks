@@ -26,9 +26,13 @@
           <button class="btn-finishi">
             <i class="fas fa-check-circle fa-2x"></i>
           </button>
-            <button class="btn-excluir" data-toggle="modal" data-target="#modalDelete">
-              <i class="fas fa-times-circle fa-2x"></i>
-            </button>
+          <button class="btn-excluir" data-toggle="modal" data-target="#modalDelete">
+            <i class="fas fa-times-circle fa-2x"></i>
+          </button>
+
+          <a class="edit" routerLink="/tasks/update/{{task.id}}">
+            <i class="fas fa-pen"></i>
+          </a>
           <button class="btn-new fa-1x float-right" (click)="navigateToTasks()">
             <i class="fas fa-plus"></i>
           </button>

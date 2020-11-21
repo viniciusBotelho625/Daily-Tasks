@@ -13,6 +13,7 @@ export class CadastroComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    document.body.classList.remove('bg-login')
     document.body.classList.add('bg-register');
   }
 }
