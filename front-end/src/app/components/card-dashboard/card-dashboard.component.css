@@ -25,7 +25,7 @@
 .text-item {
   color: white;
   display: flex;
-  font-size: 22px;
+  font-size: 1.2rem;
   margin: 0;
 }
 
@@ -37,4 +37,10 @@
 svg {
   color: white;
   margin: 0;
+}
+
+@media(max-width: 600px) {
+  svg {
+    width: 20%;
+  }
 }

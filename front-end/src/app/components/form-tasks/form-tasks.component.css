@@ -33,8 +33,19 @@ button {
   width: 350px;
 }
 
+.sidebar {
+  margin-left: -500px;
+}
+
 textarea {
   height: 180px;
   border: 1px solid rgb(155, 154, 154);
+}
+
+@media(max-width: 600px) {
+  button,
+  .date-sm {
+    margin: 0;
+  }
 }
 

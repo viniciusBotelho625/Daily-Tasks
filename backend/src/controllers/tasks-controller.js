@@ -94,8 +94,6 @@ exports.deleteTasks = (req, res, next) => {
 };
 
 exports.putTasks = (req, res, next) => {
-    console.log(req.body)
-    console.log(req.params.id)
     const { titulo, descricao} = req.body
     const dt_cadastro = new Date(req.body.dt_cadastro).toISOString().split('T')[0]
     const dt_termino = new Date(req.body.dt_termino).toISOString().split('T')[0]

@@ -10,7 +10,7 @@
 
 h3{
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 span {
@@ -20,4 +20,24 @@ span {
 button {
   height: 40px;
   margin: 2%;
+}
+
+@media(max-width: 600px) {
+  .header img {
+    width: 50%;
+  }
+
+  button {
+      width: 80px;
+      margin: 6%;
+      font-size: 15px;
+  }
+
+  span {
+    margin-left: -20px;
+  }
+
+  h3 {
+    margin-top: 30px;
+  }
 }
