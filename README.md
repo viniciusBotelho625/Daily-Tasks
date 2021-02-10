@@ -6,8 +6,8 @@
 <h1 align="center">Sua plataforma de tarefas!</h1>
 <h3 align="center"></h3>
 <p display="flex"> 
-  <img src="https://github.com/viniciusBotelho625/Daily-Tasks/blob/master/front-end/src/assets/img/Tasks_Header.png" width="350">
-  <img src="https://github.com/viniciusBotelho625/Daily-Tasks/blob/master/login.jpeg" width="600">
+  <img src="https://github.com/viniciusBotelho625/Daily-Tasks/blob/master/front-end/src/assets/img/Tasks_Header.png" width="40%">
+  <img src="https://github.com/viniciusBotelho625/Daily-Tasks/blob/master/login.jpeg" width="50%">
 </p>
 
 <h3>Tecnologias 💻</h3>
